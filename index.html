@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so dien thoai</title>
+</head>
+<body>
+<script>
+    arr = new Array();
+
+    for (i = 0;i < 10;i++){
+        random = Math.floor(Math.random()*(9999999-1000000)+1000000);
+
+        number = "09"+Math.floor(Math.random()*9)+random;
+
+        arr.push(number);
+    }
+    console.log(arr);
+    searchPhone();
+
+
+    function  searchPhone() {
+        parent = /^098| ^096 | ^097/;
+        for (i = 0; i < arr.length ; i++){
+            if (parent.test(arr[i])){
+                document.write(arr[i]+"<br/>");
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
